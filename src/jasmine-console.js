@@ -49,7 +49,7 @@
         message += " in " + ((this.finishedAt.getTime() - this.startedAt.getTime()) / 1000) + "s";
 
         console.log(message);
-        console.log("Reporter finished -> " + getStatus(runner));
+        console.log("ConsoleReporter finished -> " + getStatus(runner));
     };
 
     jasmine.ConsoleReporter.prototype.reportSpecResults = function (spec) {
