@@ -9,10 +9,12 @@
         this.passedCount = 0;
         this.failedCount = 0;
         this.skippedCount = 0;
-        this.completedCount = 0;
+        this.totalCount = 0;
     };
 
     jasmine.ConsoleReporter.prototype.reportRunnerResults = function (runner) {
+        this.finishedAt = new Date();
+
         if (this.verbose) {
             var suites = runner.suites();
             var specs = runner.specs();
@@ -36,16 +38,16 @@
                         console.log(indent + "  " + spec.description + " -> " + getStatus(spec));
                     }
                 }
+
+                console.log("");
             }
         }
 
         var message = "";
-
-        message += this.completedCount + " " + (this.completedCount === 1 ? "spec" : "specs");
+        message += this.totalCount + " " + (this.totalCount === 1 ? "spec" : "specs");
         message += ", " + this.failedCount + " " + (this.failedCount === 1 ? "failure" : "failures");
-        message += " in " + ((new Date().getTime() - this.startedAt.getTime()) / 1000) + "s";
+        message += " in " + ((this.finishedAt.getTime() - this.startedAt.getTime()) / 1000) + "s";
 
-        console.log("");
         console.log(message);
         console.log("Reporter finished -> " + getStatus(runner));
     };
@@ -67,7 +69,7 @@
                 break;
         }
 
-        this.completedCount++;
+        this.totalCount++;
     };
 
     function getStatus(child) {

@@ -18,15 +18,17 @@ If everything works, then you should see output like this in your terminal:
 	Player -> passed
 	  should be able to play a Song -> passed
 	  tells the current song if the user has made it a favorite -> passed
+
 	  when song has been paused -> passed
 		should indicate that the song is currently paused -> passed
 		should be possible to resume -> passed
+
 	  #resume -> passed
 		should throw an exception if song is already playing -> passed
 
-	5 specs, 0 failures in 0.044s
+	5 specs, 0 failures in 0.022s
 
-To run your own tests with phamine, modify sample/SpecRunner.html accordingly.
+To run your own tests with phamine, look at sample/SpecRunner.html and modify accordingly.
 
 Credits
 -------
