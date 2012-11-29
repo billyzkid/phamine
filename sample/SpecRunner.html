@@ -22,7 +22,7 @@
             (function () {
                 var jasmineEnv = jasmine.getEnv();
                 var trivialReporter = new jasmine.TrivialReporter();
-                var consoleReporter = new jasmine.ConsoleReporter(false);
+                var consoleReporter = new jasmine.ConsoleReporter(true);
 
                 jasmineEnv.addReporter(trivialReporter);
                 jasmineEnv.addReporter(consoleReporter);
