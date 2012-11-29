@@ -1,0 +1,21 @@
+﻿#!/usr/local/bin/phantomjs
+
+if phantom.args.length == 0
+  console.log "URL expected."
+  phantom.exit 1
+
+url = phantom.args[0]
+page = new WebPage()
+
+page.onConsoleMessage = (message) ->
+  # Terminate when the reporter signals testing is over.
+  switch message
+    when "Reporter finished -> passed" then phantom.exit 0
+    when "Reporter finished -> failed" then phantom.exit 1
+    when "Reporter finished -> skipped" then phantom.exit 2
+    else console.log message
+
+page.open url, (status) ->
+  if status != "success"
+    console.log "URL failed: " + url
+    phantom.exit 1
