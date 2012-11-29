@@ -8,7 +8,7 @@ url = phantom.args[0]
 page = new WebPage()
 
 page.onConsoleMessage = (message) ->
-  # Terminate when the reporter signals testing is over.
+  # Terminate when the reporter signals that testing is complete.
   switch message
     when "Reporter finished -> passed" then phantom.exit 0
     when "Reporter finished -> failed" then phantom.exit 1

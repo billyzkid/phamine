@@ -3,7 +3,7 @@
 
 Phantom-Jasmine ("phamine") is the simplest way to run your [Jasmine] (http://pivotal.github.com/jasmine/) specs via [PhantomJS] (http://phantomjs.org/).
 
-The src/phamine.coffee script opens an html file "headlessly" via PhantomJS and then logs test results to the console using the src/jasmine-console.js script, which is a simple Jasmine reporter plugin.
+The src/phamine.coffee script opens an html file "headlessly" via PhantomJS and then logs test results to the console using the src/jasmine-console.js script, which is a minimal Jasmine reporter plugin.
 
 Running Tests
 -------------
@@ -13,7 +13,7 @@ Clone this repository, cd into it, and then run:
 
 	phantomjs src/phamine.coffee sample/SpecRunner.html
 
-If everything works you should see output like this in your terminal:
+If everything works, then you should see output like this in your terminal:
 
 	Player -> passed
 	  should be able to play a Song -> passed
@@ -26,7 +26,7 @@ If everything works you should see output like this in your terminal:
 
 	5 specs, 0 failures in 0.044s
 
-To run your own tests with phamine, look at sample/SpecRunner.html and modify accordingly.
+To run your own tests with phamine, modify sample/SpecRunner.html accordingly.
 
 Credits
 -------
