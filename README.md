@@ -7,13 +7,11 @@ The src/phamine.coffee script opens an html file "headlessly" via PhantomJS and 
 
 Running Tests
 -------------
-Assuming you already have PhantomJS installed and setup...
-
-Clone this repository, cd into it, and then run:
+Assuming you already have PhantomJS installed, clone this repository, cd into it, and then execute the following command:
 
 	phantomjs src/phamine.coffee sample/SpecRunner.html
 
-If everything works, then you should see output like this in your terminal:
+The sample/SpecRunner.html file runs the sample specs included with a standalone Jasmine install. If everything works, then you will see this output in your terminal:
 
 	Player -> passed
 	  should be able to play a Song -> passed
@@ -28,7 +26,11 @@ If everything works, then you should see output like this in your terminal:
 
 	5 specs, 0 failures in 0.022s
 
-To run your own tests with phamine, look at sample/SpecRunner.html and modify accordingly.
+Or simply this output if you've initialized the ConsoleReporter with the verbose flag set to false:
+
+	5 specs, 0 failures in 0.022s
+
+To run your own tests with phamine, look at sample/SpecRunner.html and modify accordingly. Enjoy!
 
 Credits
 -------
