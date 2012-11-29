@@ -1,13 +1,13 @@
 ﻿phamine
 =======
 
-Phantom-Jasmine ("phamine") consists of two scripts for running your [Jasmine] (http://pivotal.github.com/jasmine/) specs via [PhantomJS] (http://phantomjs.org/).
+Phantom-Jasmine ("phamine") is the simplest way to run your [Jasmine] (http://pivotal.github.com/jasmine/) specs via [PhantomJS] (http://phantomjs.org/).
 
 The src/phamine.coffee script opens an html file "headlessly" via PhantomJS and then logs test results to the console using the src/jasmine-console.js script, which is a simple Jasmine reporter plugin.
 
 Running Tests
 -------------
-Assuming you already have PhantomJS installed...
+Assuming you already have PhantomJS installed and setup...
 
 Clone this repository, cd into it, and then run:
 
