@@ -11,7 +11,7 @@ Assuming you already have PhantomJS installed, clone this repository, cd into it
 
 	phantomjs src/phamine.coffee sample/SpecRunner.html
 
-The sample/SpecRunner.html file runs the sample specs included with a standalone Jasmine install. If everything works, then you will see this output in your terminal:
+The sample/SpecRunner.html file runs the sample specs included with a standalone Jasmine installation. If everything works, then you will see this output in your terminal:
 
 	Player -> passed
 	  should be able to play a Song -> passed
@@ -26,7 +26,7 @@ The sample/SpecRunner.html file runs the sample specs included with a standalone
 
 	5 specs, 0 failures in 0.022s
 
-Or simply this output if you've initialized the ConsoleReporter with the verbose flag set to false:
+Or, if you initialize the ConsoleReporter with the verbose flag set to false, then you will simply see this:
 
 	5 specs, 0 failures in 0.022s
 
