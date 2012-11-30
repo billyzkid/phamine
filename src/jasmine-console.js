@@ -35,7 +35,16 @@
                     var spec = specs[j];
 
                     if (spec.suite === suite) {
-                        console.log(indent + "  " + spec.description + " -> " + getStatus(spec));
+                        var status = getStatus(spec);
+                        console.log(indent + "  " + spec.description + " -> " + status);
+
+                        if (status === "failed") {
+                            var items = spec.results().getItems();
+                            for (var k = 0; k < items.length; k++) {
+                                var item = items[k];
+                                console.log(indent + "  " + item);
+                            }
+                        }
                     }
                 }
 
