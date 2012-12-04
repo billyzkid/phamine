@@ -3,7 +3,6 @@ bin/
 obj/
 
 # Ignored files
-*.log
 *.suo
 *.user
 *.vssscc
