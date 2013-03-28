@@ -1,4 +1,4 @@
-﻿(function (jasmine, console) {
+﻿(function () {
 
     jasmine.ConsoleReporter = function (verbose) {
         this.verbose = !!verbose;
@@ -92,4 +92,4 @@
         return status;
     }
 
-})(jasmine, console);
+})();
